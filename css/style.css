@@ -27,6 +27,8 @@ a {
     --full-page-color: #2f303a;
     --main-social-icon-color: #afb1b8;
     --main-font: 'Roboto', sans-serif;
+    --wrapper-example-background-color: rgba(33, 150, 243, 0.9);
+    --job-description-bg-color: rgba(47, 48, 58, 0.8);
 }
 
 body,
@@ -249,6 +251,7 @@ html {
 }
 
 .job-description-list-item {
+    position: relative;
     max-width: 370px;
 }
 
@@ -256,6 +259,21 @@ html {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+.job-description-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    padding: 27px 0px;
+
+    background-color: var(--job-description-bg-color);
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--white-color);
 }
 
 .team-portfolio {
@@ -380,6 +398,35 @@ address a:focus {
     display: block;
     width: 100%;
     height: auto;
+}
+
+.example-img-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.example-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transform: translateY(100%);
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+
+    color: var(--white-color);
+    background-color: var(--wrapper-example-background-color);
+}
+
+.examples-list-item:hover .example-description {
+    transform: translateY(0%);
 }
 
 .examples-list-item-container {
