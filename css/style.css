@@ -123,6 +123,23 @@ html {
     fill: currentColor;
 }
 
+.skill-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+
+    background-color: var(--button-filter-color);
+}
+
+.skill-icon-wrap .skill-icon {
+    height: 70px;
+    width: 70px;
+}
+
 /*
 .site-navigation:hover,
 .site-navigation:focus {
@@ -185,38 +202,6 @@ html {
 .company-skills {
     display: flex;
     gap: 30px;
-}
-
-.company-skills-item::before {
-    content: '';
-    display: block;
-    margin-bottom: 30px;
-    height: 120px;
-    border-radius: 4px;
-
-    background-color: #f5f4fa;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.company-skills-item:nth-child(1)::before {
-    content: '';
-    background-image: url(../images/antenna.svg);
-}
-
-.company-skills-item:nth-child(2)::before {
-    content: '';
-    background-image: url(../images/clock.svg);
-}
-
-.company-skills-item:nth-child(3)::before {
-    content: '';
-    background-image: url(../images/diagram.svg);
-}
-
-.company-skills-item:nth-child(4)::before {
-    content: '';
-    background-image: url(../images/astronaut.svg);
 }
 
 /* Answer for Yuriy or i am going to think myself
@@ -313,12 +298,21 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 27px;
+
+    gap: 30px;
+}
+
+.client-list-item {
+    height: 92px;
+    flex-basis: calc((100% - 150px) / 6);
 }
 
 .client-list-link {
-    display: inline-flex;
-    padding: 16px 32px;
+    height: inherit;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     border: 1px solid var(--main-social-icon-color);
     border-radius: 4px;
@@ -488,8 +482,8 @@ address a:focus {
     align-items: baseline;
 }
 
-.connect-box {
-    padding-left: 70px;
+.address-box {
+    margin-right: 70px;
 }
 
 .strong {
