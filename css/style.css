@@ -38,7 +38,11 @@ html {
     font-family: var(--main-font);
     font-size: 14px;
 }
-
+/* 
+* {
+    outline: 1px solid red;
+}
+ */
 .header {
     border-bottom: 1px solid #ececec;
 }
@@ -83,12 +87,56 @@ html {
 }
 
 .navigation-list > .item {
+    position: relative;
     display: inline-block;
 }
 
 .navigation-list > .item:not(:last-child) {
     margin-right: 50px;
 }
+
+.navigation-list .site-navigation::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+
+    opacity: 0;
+
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+
+    background-color: var(--logo-color);
+}
+
+.navigation-list > .item:hover ::after {
+    opacity: 1;
+}
+
+/* 
+Так делать неправильно, теги не должны быть пустыми
+
+.navigation-list .active-link-hover {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+
+    opacity: 0.2;
+
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+
+    background-color: var(--logo-color);
+}
+
+.navigation-list > .item:hover .active-link-hover {
+    opacity: 1;
+}
+ */
 
 .site-navigation {
     color: var(--head-color);
@@ -387,6 +435,8 @@ address a:focus {
     border-bottom: 1px solid #eeeeee;
     border-left: 1px solid #eeeeee;
     border-right: 1px solid #eeeeee;
+
+    transition: opacity 5s linear;
 }
 
 .examples-list-item:hover,
@@ -410,7 +460,8 @@ address a:focus {
     top: 0;
     left: 0;
 
-    transform: translateY(100%);
+    /* transform: translateY(100%); */
+    opacity: 0;
 
     display: block;
     width: 100%;
@@ -426,7 +477,8 @@ address a:focus {
 }
 
 .examples-list-item:hover .example-description {
-    transform: translateY(0%);
+    /* transform: translateY(0%); */
+    opacity: 1;
 }
 
 .examples-list-item-container {
