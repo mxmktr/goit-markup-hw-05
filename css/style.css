@@ -675,8 +675,8 @@ address a:focus {
 }
 
 .backdrop.is-hidden {
-    opacity: 1;
-    pointer-events: none;
+    opacity: 0;
+    pointer-events: all;
     visibility: hidden;
 }
 
@@ -693,6 +693,10 @@ address a:focus {
 }
 
 .close-btn-x {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     position: absolute;
     top: 8px;
     right: 8px;
@@ -701,9 +705,15 @@ address a:focus {
     height: 30px;
     border-radius: 50%;
 
-    font-size: 15px;
-
     background-color: var(--white-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.close-btn-x:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.close-btn-icon {
+    width: 14px;
+    height: 14px;
 }
