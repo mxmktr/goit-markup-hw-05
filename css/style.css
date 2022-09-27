@@ -301,17 +301,21 @@ html {
 
 .job-description-title {
     position: absolute;
+    display: block;
+    text-align: center;
     bottom: 0;
     left: 0;
 
-    display: block;
     width: 100%;
     padding: 27px 0px;
 
     background-color: var(--job-description-bg-color);
+
     text-transform: uppercase;
-    text-align: center;
     color: var(--white-color);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.03em;
 }
 
 .team-portfolio {
@@ -688,6 +692,7 @@ address a:focus {
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
 
     width: 528px;
     height: 580px;
